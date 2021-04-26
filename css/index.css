@@ -1,0 +1,124 @@
+body {
+    overflow-x: hidden;
+    background-color: var(--bg);
+}
+
+.navbar {
+    flex: 0 0 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    font-size: 1.15rem;
+    margin: 0 1.5rem 0 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: var(--s);
+    text-decoration: none;
+}
+
+.navbar ul li.active a {
+    color: var(--p);
+}
+
+.navbar ul li.active::before {
+    content: '';
+    display: block;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--p);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 2.25rem);
+}
+
+.landing-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+    padding: 1rem 0 1rem 5rem;
+}
+
+.landing-wrapper .landing-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing-wrapper .landing-text {
+    flex: 0 0 50%;
+    font-size: 1.15rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-wrapper .landing-text > div {
+    flex: calc(100% - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--p);
+}
+
+.landing-wrapper .landing-text h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    letter-spacing: -0.1rem;
+    margin: 0 0 1rem 0;
+}
+
+.landing-wrapper .landing-text p {
+    font-weight: 500;
+    color: var(--s);
+    margin: 0 0 5rem 0;
+}
+
+.landing-wrapper .landing-text > div a {
+    color: var(--p);
+    text-decoration: none;
+}
+
+.landing-wrapper .landing-text > div a span {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin: 0 0 0 0.5rem;
+}
+
+.landing-wrapper .landing-text > div a:hover span {
+    transform: translateX(1rem);
+}
+
+.landing-wrapper .image-wrapper {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-wrapper .image-background {
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: var(--p);
+}
+
+.landing-wrapper .image-wrapper img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
