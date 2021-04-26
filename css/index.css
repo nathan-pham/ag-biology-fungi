@@ -122,3 +122,20 @@ body {
     height: 100%;
     width: 100%;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    display: flex;
+    align-items: stretch;
+}
+
+.overlay .panel {
+    background-color: var(--p);
+    flex: 0 0 calc(100% / 3);
+}
